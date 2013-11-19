@@ -3650,6 +3650,8 @@ static void * wpa_driver_nl80211_init(void *ctx, const char *ifname,
 	if (nl80211_init_bss(bss))
 		goto failed;
 
+	sleep(15);
+
 	rcfg = os_zalloc(sizeof(*rcfg));
 	if (rcfg == NULL)
 		goto failed;
